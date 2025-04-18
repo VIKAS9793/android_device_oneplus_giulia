@@ -1,0 +1,19 @@
+# Firmware - from OnePlus 13R
+abl.elf
+aop.mbn
+bluetooth.mbn
+cpucp.mbn
+devcfg.mbn
+dsp.mbn
+featenabler.mbn
+hyp.mbn
+imagefv.mbn
+km41.mbn
+modem.mbn
+multiimgoem.mbn
+qupv3fw.mbn
+shrm.mbn
+tz.mbn
+uefi.mbn
+xbl.mbn
+xbl_config.mbn 

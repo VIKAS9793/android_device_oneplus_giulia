@@ -1,0 +1,2 @@
+require board=sm8650
+require version-baseband=* 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CameraConfigurationRoot>
+    <CameraModuleConfig>
+        <CameraId>0</CameraId>
+        <SensorName>OP5D3BL1</SensorName>
+        <ActuatorName>lc898129</ActuatorName>
+        <FlashName>pmic</FlashName>
+        <ChromatixName>OP5D3BL1_chromatix</ChromatixName>
+        <ModesSupported>1</ModesSupported>
+        <Position>BACK</Position>
+        <MountAngle>90</MountAngle>
+        <CSIInfo>
+            <CSIDCore>0</CSIDCore>
+            <LaneMask>0x1F</LaneMask>
+            <LaneAssign>0x4320</LaneAssign>
+            <ComboMode>0</ComboMode>
+        </CSIInfo>
+        <SensorSlaveInfo>
+            <SlaveAddress>0x20</SlaveAddress>
+            <SensorName>OP5D3BL1</SensorName>
+        </SensorSlaveInfo>
+    </CameraModuleConfig>
+</CameraConfigurationRoot> 
