@@ -4,19 +4,17 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from oneplus sm8650-common
-include device/oneplus/sm8650-common/BoardConfigCommon.mk
+# Inherit from sm8650-common
+include device/oneplus/sm8650-common/BoardConfig.mk
 
 DEVICE_PATH := device/oneplus/giulia
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := giulia,OP5D3BL1
 
 # Display
 TARGET_SCREEN_DENSITY := 450
 
 # Kernel
-TARGET_KERNEL_CONFIG += vendor/giulia_defconfig
+TARGET_KERNEL_SOURCE := kernel/oneplus/sm8650
+TARGET_KERNEL_CONFIG := giulia_defconfig
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop

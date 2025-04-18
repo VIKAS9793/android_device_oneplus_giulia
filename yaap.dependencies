@@ -1,35 +1,32 @@
 [
   {
-    "repository": "device_oneplus_sm8650-common",
+    "repository": "VIKAS9793/device_oneplus_sm8650-common",
     "target_path": "device/oneplus/sm8650-common",
-    "remote": "github",
-    "username": "VIKAS9793",
-    "branch": "fifteen"
+    "branch": "fifteen",
+    "remote": "github"
   },
   {
-    "repository": "kernel_oneplus_sm8650",
+    "repository": "VIKAS9793/kernel_oneplus_sm8650",
     "target_path": "kernel/oneplus/sm8650",
-    "remote": "github",
-    "username": "VIKAS9793",
-    "branch": "fifteen"
+    "branch": "fifteen",
+    "remote": "github"
   },
   {
-    "repository": "kernel_oneplus_sm8650-modules",
+    "repository": "VIKAS9793/kernel_oneplus_sm8650-modules",
     "target_path": "kernel/oneplus/sm8650-modules",
-    "remote": "github",
-    "username": "VIKAS9793",
-    "branch": "fifteen"
+    "branch": "fifteen",
+    "remote": "github"
   },
   {
-    "repository": "android_hardware_qcom-caf_sm8650",
-    "target_path": "hardware/qcom-caf/sm8650",
-    "remote": "yaap"
-  },
-  {
-    "repository": "proprietary_vendor_oneplus_sm8650-common",
+    "repository": "VIKAS9793/proprietary_vendor_oneplus_sm8650-common",
     "target_path": "vendor/oneplus/sm8650-common",
-    "remote": "github",
-    "username": "VIKAS9793",
-    "branch": "fifteen"
+    "branch": "fifteen",
+    "remote": "github"
+  },
+  {
+    "repository": "VIKAS9793/android_hardware_qcom-caf_sm8650",
+    "target_path": "hardware/qcom-caf/sm8650",
+    "branch": "fifteen",
+    "remote": "github"
   }
 ] 

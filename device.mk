@@ -7,35 +7,31 @@
 # Inherit from sm8650-common
 $(call inherit-product, device/oneplus/sm8650-common/common.mk)
 
+DEVICE_PATH := device/oneplus/giulia
+
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2780
 TARGET_SCREEN_WIDTH := 1264
 
 # Camera
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/camera/camera_config.xml:$(TARGET_COPY_OUT_ODM)/etc/camera/camera_config.xml
-
 PRODUCT_PACKAGES += \
-    OnePlusCameraProvider
+    Camera2
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-yaap
-
 PRODUCT_PACKAGES += \
+    FrameworksResGiulia \
+    SystemUIResGiulia \
+    SettingsResGiulia \
     OpenDeltaOverlay \
-    OpenDeltaOverlayVanilla \
-    OnePlus13RCameraOverlay
+    OpenDeltaOverlayVanilla
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    hardware/qcom-caf/sm8650
-
-# Properties
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.build.version.yaap=$(YAAP_VERSION)
+    $(DEVICE_PATH)
 
 # Inherit from the proprietary files
 $(call inherit-product, vendor/oneplus/sm8650-common/sm8650-common-vendor.mk) 
