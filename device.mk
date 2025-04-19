@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
 DEVICE_PATH := device/oneplus/giulia
 
 # A/B
@@ -24,6 +28,11 @@ AB_OTA_PARTITIONS += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# Alert Slider
+PRODUCT_PACKAGES += \
+    KeyHandler \
+    tri-state-key-calibrate
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
@@ -33,7 +42,9 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.primary.default \
     audio.r_submix.default \
-    audio.usb.default
+    audio.usb.default \
+    libaudio-resampler \
+    tinymix
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2780
@@ -49,7 +60,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
-    Camera2 \
+    Aperture \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 # Display
@@ -70,37 +81,63 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.3-service.oneplus
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0 \
+    libhidltransport.vendor \
+    libhwbinder.vendor
+
 # Init
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
+
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.1-service.oneplus
+
+# NFC
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2-service \
+    com.android.nfc_extras \
+    Tag
 
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResGiulia \
     SystemUIResGiulia \
-    SettingsResGiulia
+    SettingsResGiulia \
+    LineageGiuliaSettings \
+    LineageGiuliaSystemUI
 
-# Remove YAAP-specific overlays
-PRODUCT_PACKAGE_OVERLAYS := 
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH)
+PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Additional Hardware Components
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti \
     android.hardware.biometrics.face@1.0-service \
-    android.hardware.biometrics.fingerprint@2.3-service \
     android.hardware.light@2.0-service \
     android.hardware.vibrator@1.3-service.oneplus \
     vendor.oneplus.hardware.CameraMDMHIDL@1.0-service \
     vendor.oneplus.hardware.display@1.0-service
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti \
+    vendor.lineage.power@1.0-service.oneplus
 
 # Additional Vendor Libraries
 PRODUCT_PACKAGES += \
@@ -111,13 +148,30 @@ PRODUCT_PACKAGES += \
     vendor.oneplus.hardware.camera@1.0.vendor \
     vendor.oneplus.hardware.display@1.0.vendor
 
-# Device characteristics
-PRODUCT_CHARACTERISTICS := nosdcard
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.1-service.multihal \
+    android.frameworks.sensorservice@1.0.vendor
 
-# Display
-TARGET_SCREEN_HEIGHT := 2780
-TARGET_SCREEN_WIDTH := 1264
-TARGET_SCREEN_DENSITY := 450
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.oneplus
+
+# Trust
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.3-service-qti
+
+# WiFi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
+    hostapd \
+    libwpa_client \
+    wpa_supplicant \
+    wpa_supplicant.conf
 
 # Permissions
 PRODUCT_COPY_FILES += \

@@ -6,5 +6,13 @@
   {
     "repository": "android_vendor_oneplus_giulia",
     "target_path": "vendor/oneplus/giulia"
+  },
+  {
+    "repository": "android_hardware_oneplus",
+    "target_path": "hardware/oneplus"
+  },
+  {
+    "repository": "android_hardware_lineage_compat",
+    "target_path": "hardware/lineage/compat"
   }
 ] 
