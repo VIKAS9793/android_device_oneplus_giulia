@@ -1,3 +1,55 @@
+# Device identifiers
+ro.product.vendor.brand=oneplus
+ro.product.vendor.device=giulia
+ro.product.vendor.manufacturer=oneplus
+ro.product.vendor.model=CPH2691
+ro.product.vendor.name=OnePlus13R
+
+# Display
+ro.vendor.display.sensortype=2
+ro.vendor.display.svi=1
+vendor.display.svi.config=1
+vendor.display.svi.config_path=/vendor/etc/SVIConfig.xml
+
+# Camera
+ro.vendor.camera.extensions.package=com.oneplus.camera
+ro.vendor.camera.extensions.service=com.oneplus.camera.CameraExtensionsService
+
+# Performance
+ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.perf.scroll_opt=1
+
+# Audio
+ro.vendor.audio.sdk.fluencetype=fluence
+ro.vendor.audio.sdk.ssr=false
+persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicerec=true
+persist.vendor.audio.fluence.speaker=true
+
+# Bluetooth
+persist.vendor.qcom.bluetooth.enable.splita2dp=true
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
+persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
+persist.vendor.qcom.bluetooth.twsp_state.enabled=false
+persist.vendor.qcom.bluetooth.scram.enabled=true
+persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false
+
+# Radio
+persist.vendor.radio.enableadvancedscan=true
+persist.vendor.radio.apm_sim_not_pwdn=1
+persist.vendor.radio.sib16_support=1
+persist.vendor.radio.custom_ecc=1
+persist.vendor.radio.procedure_bytes=SKIP
+persist.vendor.radio.rat_on=combine
+
+# USB
+persist.vendor.usb.config=mtp,adb
+
+# Misc
+persist.vendor.cne.feature=1
+persist.vendor.data.mode=concurrent
+persist.vendor.overlay.izat.optin=rro
+
 # Bluetooth
 bluetooth.device.default_name=OnePlus 13R
 
