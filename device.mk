@@ -52,9 +52,9 @@ TARGET_SCREEN_WIDTH := 1264
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl-qti \
-    android.hardware.boot@1.2-impl-qti.recovery \
-    android.hardware.boot@1.2-service
+    android.hardware.boot@1.3-impl-qti \
+    android.hardware.boot@1.3-impl-qti.recovery \
+    android.hardware.boot@1.3-service
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -74,7 +74,7 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4.vendor \
+    android.hardware.drm@1.5.vendor \
     android.hardware.drm-service.clearkey
 
 # Fastboot
@@ -87,8 +87,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.2-impl \
+    android.hardware.health@2.2-service
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -111,7 +111,7 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service \
+    android.hardware.nfc@1.3-service \
     com.android.nfc_extras \
     Tag
 
@@ -121,7 +121,9 @@ PRODUCT_PACKAGES += \
     SystemUIResGiulia \
     SettingsResGiulia \
     LineageGiuliaSettings \
-    LineageGiuliaSystemUI
+    LineageGiuliaSystemUI \
+    OnePlusGiuliaCutoutOverlay \
+    OnePlusGiuliaRefreshOverlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -167,11 +169,18 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
+    android.hardware.wifi@1.1-service \
     hostapd \
     libwpa_client \
     wpa_supplicant \
     wpa_supplicant.conf
+
+# LineageOS-specific features
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare@1.0-service.oneplus \
+    vendor.lineage.fastcharge@1.0-service.oneplus \
+    vendor.lineage.camera.motor@1.0-service.oneplus \
+    vendor.lineage.display.cutout@1.0-service.oneplus
 
 # Permissions
 PRODUCT_COPY_FILES += \
