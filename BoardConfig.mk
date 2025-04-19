@@ -36,4 +36,4 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
 
 # Include proprietary files
-include vendor/oneplus/sm8650-common/BoardConfigVendor.mk 
+include vendor/oneplus/giulia/BoardConfigVendor.mk 
