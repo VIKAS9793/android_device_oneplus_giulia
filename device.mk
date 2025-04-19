@@ -83,9 +83,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     FrameworksResGiulia \
     SystemUIResGiulia \
-    SettingsResGiulia \
-    OpenDeltaOverlay \
-    OpenDeltaOverlayVanilla
+    SettingsResGiulia
+
+# Remove YAAP-specific overlays
+PRODUCT_PACKAGE_OVERLAYS := 
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2024 Yet Another AOSP Project
+# Copyright (C) 2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/yaap_giulia.mk
+    $(LOCAL_DIR)/lineage_giulia.mk
 
 COMMON_LUNCH_CHOICES := \
-    yaap_giulia-user \
-    yaap_giulia-userdebug \
-    yaap_giulia-eng 
+    lineage_giulia-user \
+    lineage_giulia-userdebug \
+    lineage_giulia-eng 
