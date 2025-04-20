@@ -1,6 +1,14 @@
 [
   {
-    "repository": "android_hardware_oplus",
-    "target_path": "hardware/oplus"
+    "repository": "VIKAS9793/vendor_oneplus_giulia",
+    "target_path": "vendor/oneplus/giulia",
+    "branch": "lineage-22.2",
+    "remote": "github"
+  },
+  {
+    "repository": "VIKAS9793/hardware_oplus",
+    "target_path": "hardware/oplus",
+    "branch": "lineage-22",
+    "remote": "github"
   }
 ] 
