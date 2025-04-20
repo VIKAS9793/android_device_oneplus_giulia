@@ -1,0 +1,35 @@
+# Core system modules
+qcom-scm.ko
+smem.ko
+socinfo.ko
+qcom_ipc_logging.ko
+qrtr.ko
+qcom_glink_smem.ko
+msm_sharedmem.ko
+
+# Clock and platform modules
+clk-qcom.ko
+gcc-pineapple.ko
+pinctrl-pineapple.ko
+
+# Memory modules
+mem_buf.ko
+mem_buf_dev.ko
+
+# Power management
+rpmh-regulator.ko
+qti-fixed-regulator.ko
+qcom_pm8008-regulator.ko
+
+# Security modules
+qseecom_proxy.ko
+hdcp_qseecom_dlkm.ko
+qce50_dlkm.ko
+
+# Display modules
+drm_display_helper.ko
+oplus_sync_fence.ko
+msm_hw_fence.ko
+msm_ext_display.ko
+hdmi_dlkm.ko
+msm_drm.ko 

@@ -1,0 +1,8 @@
+# Health
+/sys/class/power_supply/battery/input_suspend    u:object_r:sysfs_battery_supply:s0
+
+# Touch
+/proc/touchpanel/double_tap_enable              u:object_r:proc_touchpanel:s0
+
+# Charging
+/sys/class/oplus_chg/battery/fast_charge        u:object_r:sysfs_fastcharge:s0 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Default color for notification LED. -->
+    <color name="config_defaultNotificationColor">#FF00FF00</color>
+
+    <!-- Default value for led color when battery is fully charged -->
+    <color name="config_defaultBatteryColor">#FF00FF00</color>
+
+    <!-- Whether device has a physical display cutout -->
+    <bool name="config_physicalDisplayCutout">true</bool>
+
+    <!-- Whether device supports in-display fingerprint -->
+    <bool name="config_supportsUdfps">true</bool>
+
+    <!-- The properties of in-display fingerprint sensor -->
+    <string-array name="config_udfps_sensor_props" translatable="false">
+        <item>540</item>  <!-- sensorLocationX -->
+        <item>2202</item> <!-- sensorLocationY -->
+        <item>94</item>   <!-- sensorRadius -->
+    </string-array>
+
+    <!-- Whether device has warp charging support -->
+    <bool name="config_hasWarpCharger">true</bool>
+
+    <!-- Whether device supports variable refresh rate -->
+    <bool name="config_hasVariableRefreshRate">true</bool>
+
+    <!-- Array of desired screen brightness in nits corresponding to the lux values
+         in the config_autoBrightnessLevels array. -->
+    <array name="config_autoBrightnessDisplayValuesNits">
+        <item>5</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>400</item>
+        <item>600</item>
+        <item>800</item>
+        <item>1000</item>
+        <item>1200</item>
+        <item>2000</item>
+    </array>
+
+    <!-- Screen brightness used to dim the screen when the user activity
+         timeout expires.  May be less than the minimum allowed brightness setting
+         that can be set by the user. -->
+    <integer name="config_screenBrightnessDim">6</integer>
+
+    <!-- Whether device supports high refresh rate -->
+    <bool name="config_supportsHighRefreshRate">true</bool>
+</resources> 

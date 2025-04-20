@@ -1,0 +1,7 @@
+# Display and fence modules for early boot
+drm_display_helper.ko
+oplus_sync_fence.ko
+msm_hw_fence.ko
+msm_ext_display.ko
+hdmi_dlkm.ko
+msm_drm.ko 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Enable auxiliary cameras selector. -->
+    <bool name="config_enableAuxCameras">true</bool>
+
+    <!-- List of ID of auxiliary cameras that must be ignored by the app. -->
+    <string-array name="config_ignoredAuxCameraIds">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <!-- An array of triplets made of (camera ID, qualities, framerates).
+         These video modes will be added to the available quality/framerate combinations
+         of a camera device.
+         Make sure the device is able to handle those configurations and maintain a stable
+         frame rate at any condition.
+         Note that you can't add video qualities that aren't already exposed by the camera,
+         you can only add new framerates. -->
+    <string-array name="config_additionalVideoConfigurations">
+        <!-- Main camera -->
+        <item>0</item>
+        <item>sd|hd|fhd|uhd</item>
+        <item>60</item>
+    </string-array>
+</resources> 

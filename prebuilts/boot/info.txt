@@ -1,0 +1,14 @@
+base address: None
+board name: None
+cmdline: None
+dtb offset: None
+header version: 4
+image type: AOSP
+kernel offset: None
+original size: 201326592
+os version: 14.0.0
+page size: None
+ramdisk compression: empty
+ramdisk offset: None
+sigtype: AVBv2
+tags offset: None

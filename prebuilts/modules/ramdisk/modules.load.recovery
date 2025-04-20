@@ -1,0 +1,4 @@
+# Essential display modules for recovery
+drm_display_helper.ko
+msm_drm.ko
+hdmi_dlkm.ko 
